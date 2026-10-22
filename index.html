@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio</title>
+<meta name="description" content="Projects and a short work summary. Resume available on request.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='44' fill='%23C98B1B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Young+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="#top" id="brand"></a>
+  <nav aria-label="Main">
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#request" class="nav-cta">Request resume</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <h1 id="hero-title"></h1>
+    <p id="hero-intro" class="lede"></p>
+    <div class="actions">
+      <a class="btn" href="#projects">See projects</a>
+      <a class="btn ghost" href="#request">Request resume</a>
+    </div>
+  </section>
+
+  <section id="projects" class="block">
+    <h2>Projects</h2>
+    <div id="project-grid" class="grid"></div>
+  </section>
+
+  <section id="resume" class="block">
+    <h2 id="resume-heading">Resume</h2>
+    <div class="resume-layout">
+      <div class="resume-main">
+        <p id="resume-summary" class="summary"></p>
+        <h3>Experience</h3>
+        <div id="experience"></div>
+        <h3>Education</h3>
+        <ul id="education" class="plain"></ul>
+        <h3>Skills</h3>
+        <ul id="skills" class="chips"></ul>
+      </div>
+
+      <aside id="request" class="request">
+        <h3 id="request-heading">Request my resume</h3>
+        <p id="request-text"></p>
+        <form id="request-form" novalidate>
+          <label for="f-name">Name</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required>
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required>
+          <label for="f-company">Company <span class="opt">(optional)</span></label>
+          <input id="f-company" name="company" type="text" autocomplete="organization">
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" aria-hidden="true">
+          <button id="form-btn" class="btn" type="submit">Request resume</button>
+          <p id="form-status" class="status" role="status" aria-live="polite"></p>
+        </form>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <span id="foot-name"></span>
+  <span id="foot-links" class="foot-links"></span>
+</footer>
+
+<script src="content.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
