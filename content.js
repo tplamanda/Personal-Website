@@ -7,16 +7,16 @@ window.SITE = {
 
   /* ---------- Basics ---------- */
   name: "Amanda Tan",
-  headline: "I build small tools that make finance operations work easier.",
+  headline: "Building small things to make finance operation in my life easier",
   intro: "A collection of projects I have built, plus a short summary of my work. My full resume is available on request.",
   email: "you@example.com",            // shown in the footer and in error messages
-  github: "",                          // e.g. "https://github.com/yourname"
-  linkedin: "",                        // e.g. "https://www.linkedin.com/in/yourname"
+  github: "",                          // e.g. "https://github.com/tplamanda"
+  linkedin: "",                        // e.g. "https://www.linkedin.com/in/amandatanpl"
 
   /* ---------- Request resume form ----------
      1. Go to https://web3forms.com and enter your email to get a free access key.
      2. Paste the key below. Requests will be emailed to the address you used. */
-  formKey: "PASTE_WEB3FORMS_ACCESS_KEY_HERE",
+  formKey: "8a24064c-5cfa-4996-b6f0-a31d2f67a65c",
 
   /* ---------- Projects ----------
      Add a project by copying one block (from { to },) and pasting it below.
@@ -33,16 +33,16 @@ window.SITE = {
       image: ""
     },
     {
-      title: "Project title",
-      description: "One sentence on what it does and who it helps.",
+      title: "Guesthouse",
+      description: "(WIP) For friends and family who wish to stay with us in Japan",
       tags: ["Tag", "Tag"],
       demo: "",
       code: "",
       image: ""
     },
     {
-      title: "Project title",
-      description: "One sentence on what it does and who it helps.",
+      title: "PharmaFun",
+      description: "(WIP) A game to recommend Japanese pharmacy products to friends visiting",
       tags: ["Tag", "Tag"],
       demo: "",
       code: "",
