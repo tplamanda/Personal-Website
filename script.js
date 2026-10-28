@@ -22,6 +22,71 @@
   $("hero-title").textContent = S.headline;
   $("hero-intro").textContent = S.intro;
 
+  var locationList = $("location-list");
+  [
+    ["Current", S.location.current],
+    ["Origin", S.location.origin],
+  ].forEach(function (item) {
+    locationList.appendChild(el("dt", "", item[0]));
+    locationList.appendChild(el("dd", "", item[1]));
+  });
+  var aimingFor = document.createElement("dd");
+  S.location.aimingFor.forEach(function (place) {
+    aimingFor.appendChild(el("span", "location-destination", place));
+  });
+  locationList.appendChild(el("dt", "", "Aiming for"));
+  locationList.appendChild(aimingFor);
+
+  function factIcon(type) {
+    var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("viewBox", "0 0 64 64");
+    svg.setAttribute("class", "fact-icon");
+    svg.setAttribute("aria-hidden", "true");
+
+    function shape(tag, attributes) {
+      var node = document.createElementNS(svg.namespaceURI, tag);
+      Object.keys(attributes).forEach(function (name) {
+        node.setAttribute(name, attributes[name]);
+      });
+      svg.appendChild(node);
+    }
+
+    if (type === "flower") {
+      [[32, 12], [48, 24], [42, 43], [22, 43], [16, 24]].forEach(function (point) {
+        shape("circle", { cx: point[0], cy: point[1], r: 12, class: "flower-petal" });
+      });
+      shape("circle", { cx: 32, cy: 29, r: 12, class: "flower-petal" });
+    } else {
+      shape("path", { d: "M8 28 9 8l16 11q7-3 14 0L55 8l1 20c2 17-8 30-24 30S6 45 8 28Z", class: "cat-shape" });
+    }
+    return svg;
+  }
+
+  var factCards = $("fact-cards");
+  S.funFacts.forEach(function (fact, index) {
+    var item = el("li");
+    var card = el("button", "fact-card");
+    card.type = "button";
+    card.setAttribute("aria-pressed", "false");
+    card.setAttribute("aria-label", "Fun fact: " + fact + " Activate to flip card.");
+
+    var inner = el("span", "fact-card-inner");
+    var front = el("span", "fact-face fact-front");
+    front.appendChild(factIcon(index % 2 === 0 ? "flower" : "cat"));
+    front.appendChild(el("span", "fact-front-label", "Flip to reveal"));
+    var back = el("span", "fact-face fact-back", fact);
+    back.setAttribute("aria-hidden", "true");
+    inner.appendChild(front);
+    inner.appendChild(back);
+    card.appendChild(inner);
+    card.addEventListener("click", function () {
+      var flipped = card.classList.toggle("is-flipped");
+      card.setAttribute("aria-pressed", String(flipped));
+    });
+    item.appendChild(card);
+    factCards.appendChild(item);
+  });
+
   /* Projects */
   var grid = $("project-grid");
   S.projects.forEach(function (p, i) {
@@ -77,7 +142,7 @@
   $("request-text").textContent = R.requestText;
 
   /* Footer links */
-  var fl = $("foot-links");
+  var fl = $("top-links");
   if (S.email) fl.appendChild(link("Email", "mailto:" + S.email));
   if (S.github) fl.appendChild(link("GitHub", S.github));
   if (S.linkedin) fl.appendChild(link("LinkedIn", S.linkedin));

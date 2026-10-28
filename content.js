@@ -6,12 +6,22 @@
 window.SITE = {
 
   /* ---------- Basics ---------- */
-  name: "Amanda Tan",
-  headline: "Building small things to make finance operation in my life easier",
-  intro: "A collection of projects I have built, plus a short summary of my work. My full resume is available on request.",
-  email: "you@example.com",            // shown in the footer and in error messages
-  github: "",                          // e.g. "https://github.com/tplamanda"
-  linkedin: "",                        // e.g. "https://www.linkedin.com/in/amandatanpl"
+  name: "Keeping Score",
+  headline: "Learning, trying, building things",
+  intro: "Humanities graduate turned finance operations professional, now learning to vibe code, crochet and speak a new language.",
+  location: {
+    current: "Tokyo, Japan",
+    origin: "Singapore, Singapore",
+    aimingFor: ["Stockholm or Gothenburg, Sweden", "Copenhagen, Denmark"]
+  },
+  funFacts: [
+    "Did a women's doubles HYROX for fun in 2024.",
+    "Enjoys collecting music CDs.",
+    "Accidentally represented my faculty in a tennis singles competition in university. That was how I found out how long a tennis game could be."
+  ],
+  email: "nicetomeetyoumandy@gmail.com",            // shown in the footer and in error messages
+  github: "https://github.com/tplamanda",
+  linkedin: "https://www.linkedin.com/in/amandatanpl",
 
   /* ---------- Request resume form ----------
      1. Go to https://web3forms.com and enter your email to get a free access key.
@@ -59,13 +69,13 @@ window.SITE = {
       {
         role: "Senior AR Operations Analyst",
         company: "Zendesk",
-        period: "",
-        note: "First AR hire. Built out collections processes, co-led the Cforia implementation, and automated reporting with Google Apps Script."
+        period: "2021-2025",
+        note: "First AR hire. Built out collections processes and processes, co-led a software implementation, and automated reporting with Google Apps Script."
       },
       {
         role: "Finance Assistant",
         company: "Affordable Art Fair",
-        period: "",
+        period: "2019-2020",
         note: "AR, AP, and month-end close across Singapore, Australia, and Hong Kong."
       }
     ],

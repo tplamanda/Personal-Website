@@ -8,7 +8,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='44' fill='%23C98B1B'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Young+Serif&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,17 +18,48 @@
   <nav aria-label="Main">
     <a href="#projects">Projects</a>
     <a href="#resume">Resume</a>
-    <a href="#request" class="nav-cta">Request resume</a>
+    <span id="top-links" class="top-links"></span>
   </nav>
 </header>
 
 <main id="top">
   <section class="hero">
-    <h1 id="hero-title"></h1>
-    <p id="hero-intro" class="lede"></p>
-    <div class="actions">
-      <a class="btn" href="#projects">See projects</a>
-      <a class="btn ghost" href="#request">Request resume</a>
+    <div class="hero-copy">
+      <h1 id="hero-title"></h1>
+      <p id="hero-intro" class="lede"></p>
+      <dl id="location-list" class="location-list"></dl>
+    </div>
+    <div class="hero-portrait">
+      <svg class="hero-frame" viewBox="0 0 100 100" aria-hidden="true">
+        <defs>
+          <circle id="hero-petal" cx="50" cy="8" r="8"></circle>
+        </defs>
+        <g fill="currentColor">
+          <use href="#hero-petal"></use>
+          <use href="#hero-petal" transform="rotate(18 50 50)"></use>
+          <use href="#hero-petal" transform="rotate(36 50 50)"></use>
+          <use href="#hero-petal" transform="rotate(54 50 50)"></use>
+          <use href="#hero-petal" transform="rotate(72 50 50)"></use>
+          <use href="#hero-petal" transform="rotate(90 50 50)"></use>
+          <use href="#hero-petal" transform="rotate(108 50 50)"></use>
+          <use href="#hero-petal" transform="rotate(126 50 50)"></use>
+          <use href="#hero-petal" transform="rotate(144 50 50)"></use>
+          <use href="#hero-petal" transform="rotate(162 50 50)"></use>
+          <use href="#hero-petal" transform="rotate(180 50 50)"></use>
+          <use href="#hero-petal" transform="rotate(198 50 50)"></use>
+          <use href="#hero-petal" transform="rotate(216 50 50)"></use>
+          <use href="#hero-petal" transform="rotate(234 50 50)"></use>
+          <use href="#hero-petal" transform="rotate(252 50 50)"></use>
+          <use href="#hero-petal" transform="rotate(270 50 50)"></use>
+          <use href="#hero-petal" transform="rotate(288 50 50)"></use>
+          <use href="#hero-petal" transform="rotate(306 50 50)"></use>
+          <use href="#hero-petal" transform="rotate(324 50 50)"></use>
+          <use href="#hero-petal" transform="rotate(342 50 50)"></use>
+        </g>
+      </svg>
+      <div class="hero-photo">
+        <img src="images/portrait.jpg" alt="Amanda relaxing with her cat and laptop">
+      </div>
     </div>
   </section>
 
@@ -67,11 +98,15 @@
       </aside>
     </div>
   </section>
+
+  <section id="fun-facts" class="block">
+    <h2>Fun facts</h2>
+    <ul id="fact-cards" class="facts"></ul>
+  </section>
 </main>
 
 <footer class="foot">
   <span id="foot-name"></span>
-  <span id="foot-links" class="foot-links"></span>
 </footer>
 
 <script src="content.js"></script>
